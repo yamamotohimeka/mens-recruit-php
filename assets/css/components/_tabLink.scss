@@ -1,0 +1,42 @@
+.tabLink {
+  color: #484848;
+  font-weight: 600;
+  .flex {
+    dl {
+      width: 50%;
+      border-top: 1px solid #d7d7da;
+      &:nth-of-type(1) {
+        border-right: 1px solid #d7d7da;
+      }
+      a {
+        gap: calc(12vw / (768 / 100));
+        dd {
+          font-size: calc(28vw / (768 / 100));
+        }
+      }
+    }
+  }
+  dl {
+    border-bottom: 1px solid #d7d7da;
+    background: linear-gradient(to bottom, #fff 0%, #faf7f8 43%, #ece7e9 56%, #ece7e9 100%);
+    a {
+      @include flex-center;
+      padding: calc(26vw / (768 / 100)) 0;
+      gap: calc(32vw / (768 / 100));
+      dt {
+        .tel {
+          width: calc(72vw / (768 / 100));
+        }
+        .form {
+          width: calc(64vw / (768 / 100));
+        }
+        .line {
+          width: calc(88vw / (768 / 100));
+        }
+      }
+      dd {
+        font-size: calc(36vw / (768 / 100));
+      }
+    }
+  }
+}

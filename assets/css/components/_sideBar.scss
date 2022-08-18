@@ -1,0 +1,26 @@
+.sideBar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @include pc {
+    gap: calc(16vw / (1280 / 100));
+  }
+  div {
+    width: 100%;
+    text-align: right;
+    &:nth-of-type(2) {
+      img {
+        width: 248px;
+        @include pc {
+          width: calc(248vw / (1280 / 100));
+        }
+      }
+    }
+    img {
+      width: 232px;
+      @include pc {
+        width: calc(232vw / (1280 / 100));
+      }
+    }
+  }
+}

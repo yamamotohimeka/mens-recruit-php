@@ -1,0 +1,139 @@
+.reason {
+  &-head {
+    img {
+      width: 100%;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    gap: 32px;
+    @include pc {
+      margin-top: calc(16vw / (1280 / 100));
+      gap: calc(32vw / (1280 / 100));
+    }
+    dl {
+      &:nth-of-type(1) {
+        dt {
+          color: $primaryMain;
+          border-bottom: 6px solid $primaryMain;
+          @include pc {
+            border-bottom: calc(6vw / (1280 / 100)) solid $primaryMain;
+          }
+          @include tab {
+            border-bottom: calc(6vw / (768 / 100)) solid $primaryMain;
+          }
+          &::before {
+            background: url(../images/reason-list-deco0.png) no-repeat;
+            background-size: 100%;
+          }
+        }
+      }
+      &:nth-of-type(2) {
+        dt {
+          color: #baa516;
+          border-bottom: 6px solid #baa516;
+          @include pc {
+            border-bottom: calc(6vw / (1280 / 100)) solid #baa516;
+          }
+          @include tab {
+            border-bottom: calc(6vw / (768 / 100)) solid #baa516;
+          }
+          &::before {
+            background: url(../images/reason-list-deco1.png) no-repeat;
+            background-size: 100%;
+          }
+        }
+      }
+      &:nth-of-type(3) {
+        dt {
+          color: #36b136;
+          border-bottom: 6px solid #36b136;
+          @include pc {
+            border-bottom: calc(6vw / (1280 / 100)) solid #36b136;
+          }
+          @include tab {
+            border-bottom: calc(6vw / (768 / 100)) solid #36b136;
+          }
+          &::before {
+            background: url(../images/reason-list-deco2.png) no-repeat;
+            background-size: 100%;
+          }
+        }
+      }
+      &:nth-of-type(4) {
+        dt {
+          color: #db457d;
+          border-bottom: 6px solid #db457d;
+          @include pc {
+            border-bottom: calc(6vw / (1280 / 100)) solid #db457d;
+          }
+          @include tab {
+            border-bottom: calc(6vw / (768 / 100)) solid #db457d;
+          }
+          &::before {
+            background: url(../images/reason-list-deco3.png) no-repeat;
+            background-size: 100%;
+          }
+        }
+      }
+      &:nth-of-type(5) {
+        dt {
+          color: #d40400;
+          border-bottom: 6px solid #d40400;
+          @include pc {
+            border-bottom: calc(6vw / (1280 / 100)) solid #d40400;
+          }
+          @include tab {
+            border-bottom: calc(6vw / (768 / 100)) solid #d40400;
+          }
+          &::before {
+            background: url(../images/reason-list-deco4.png) no-repeat;
+            background-size: 100%;
+          }
+        }
+      }
+      dt {
+        @include flex-center;
+        justify-content: flex-start;
+        padding: 0 0 8px 2rem;
+        gap: 16px;
+        font-family: "小塚ゴシック Pr6N", "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", sans-serif;
+        font-size: 42px;
+        font-weight: 600;
+        @include pc {
+          padding: 0 0 calc(8vw / (1280 / 100)) 2rem;
+          font-size: calc(42vw / (1280 / 100));
+        }
+        @include tab {
+          font-size: calc(36vw / (768 / 100));
+        }
+        &::before {
+          content: "";
+          width: 42px;
+          height: 42px;
+        }
+      }
+      dd {
+        margin-top: 12px;
+        padding: 0 80px 0 2rem;
+        font-size: 20px;
+        line-height: 1.6;
+        letter-spacing: 0.04rem;
+        @include pc {
+          margin-top: calc(12vw / (1280 / 100));
+          padding: 0 calc(80vw / (1280 / 100)) 0 2rem;
+          font-size: calc(20vw / (1280 / 100));
+        }
+        @include tab {
+          margin-top: calc(16vw / (768 / 100));
+          font-size: calc(18vw / (768 / 100));
+        }
+        @include sp {
+          font-size: calc(16vw / (440 / 100));
+        }
+      }
+    }
+  }
+}

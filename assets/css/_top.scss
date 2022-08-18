@@ -1,0 +1,222 @@
+.top {
+  @include tab {
+    padding-bottom: calc(8vw / (768 / 100));
+  }
+  h2 {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    @include pc {
+      font-size: calc(36vw / (1280 / 100));
+    }
+    @include tab {
+      margin-top: calc(42vw / (768 / 100));
+      font-size: calc(48vw / (768 / 100));
+    }
+  }
+  p {
+    font-size: 24px;
+    text-align: center;
+    @include pc {
+      font-size: calc(24vw / (1280 / 100));
+    }
+    @include tab {
+      margin-top: calc(6vw / (768 / 100));
+      font-size: calc(31vw / (768 / 100));
+    }
+  }
+  &__desc {
+    @include flex-center;
+    margin-top: 16px;
+    gap: 40px;
+    @include pc {
+      margin-top: calc(16vw / (1280 / 100));
+      gap: calc(40vw / (1280 / 100));
+    }
+    @include tab {
+      display: none;
+    }
+    dl {
+      position: relative;
+      width: 260px;
+      height: 260px;
+      margin-top: 32px;
+      @include pc {
+        width: calc(260vw / (1280 / 100));
+        height: calc(260vw / (1280 / 100));
+        margin-top: calc(32vw / (1280 / 100));
+      }
+      &:hover dt {
+        display: none;
+      }
+      dt {
+        position: absolute;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background: $primaryMain;
+        box-shadow: 0px 0px 21px -1px rgba($color: #000000, $alpha: 0.5);
+        @include pc {
+          width: calc(260vw / (1280 / 100));
+          height: calc(260vw / (1280 / 100));
+          box-shadow: 0px 0px calc(21vw / (1280 / 100)) -1px rgba($color:
+                #000000, $alpha: 0.5);
+        }
+        p {
+          position: absolute;
+          width: 260px;
+          top: 50%;
+          left: 50%;
+          color: #fff;
+          font-size: 32px;
+          font-weight: 600;
+          transform: translate(-50%, -50%);
+          @include pc {
+            width: calc(260vw / (1280 / 100));
+            font-size: calc(32vw / (1280 / 100));
+          }
+        }
+      }
+      dd {
+        position: absolute;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0px 0px 21px -1px rgba($color: #000000, $alpha: 0.5);
+        z-index: -1;
+        @include pc {
+          width: calc(260vw / (1280 / 100));
+          height: calc(260vw / (1280 / 100));
+          box-shadow: 0px 0px calc(21vw / (1280 / 100)) -1px rgba($color:
+                #000000, $alpha: 0.5);
+        }
+        p {
+          position: absolute;
+          width: 260px;
+          top: 50%;
+          left: 50%;
+          font-size: 22px;
+          line-height: 1.4;
+          transform: translate(-50%, -50%);
+          @include pc {
+            width: calc(260vw / (1280 / 100));
+            font-size: calc(22vw / (1280 / 100));
+          }
+        }
+      }
+    }
+  }
+  &__tabDesc {
+    margin-top: calc(36vw / (768 / 100));
+    padding: 0 3%;
+    dl {
+      &:nth-of-type(1) {
+        dt::before {
+          content: "1.";
+        }
+      }
+      &:nth-of-type(2) {
+        dt::before {
+          content: "2.";
+        }
+      }
+      &:nth-of-type(3) {
+        dt::before {
+          content: "3.";
+        }
+      }
+      dt {
+        background: $primaryMain;
+        position: relative;
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 42px;
+          color: #fff;
+          font-size: calc(34vw / (768 / 100));
+          font-weight: 600;
+          transform: translateY(-50%);
+        }
+        p {
+          padding: calc(12vw / (768 / 100)) 0;
+          color: #fff;
+          font-size: calc(34vw / (768 / 100));
+          font-weight: 600;
+        }
+      }
+      dd {
+        p {
+          padding: calc(16vw / (768 / 100)) 0;
+          color: $primaryMain;
+          font-size: calc(18vw / (768 / 100));
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+  &__guide {
+    h3 {
+      display: flex;
+      align-items: center;
+      margin-top: 60px;
+      gap: 8px;
+      font-size: 32px;
+      font-weight: 600;
+      @include pc {
+        margin-top: calc(60vw / (1280 / 100));
+        gap: calc(8vw / (1280 / 100));
+        font-size: calc(32vw / (1280 / 100));
+      }
+      &::before {
+        content: "";
+        width: 20px;
+        height: 32px;
+        background: url(../../assets/images/top-guide-head.png) no-repeat;
+        background-size: 100%;
+        @include pc {
+          width: calc(20vw / (1280 / 100));
+          height: calc(32vw / (1280 / 100));
+        }
+      }
+    }
+    &__list {
+      @include flex;
+      margin-top: 40px;
+      @include pc {
+        margin-top: calc(40vw / (1280 / 100));
+      }
+      li {
+        box-shadow: 0px 0px 21px -1px rgba($color: #000000, $alpha: 0.5);
+        @include pc {
+          box-shadow: 0px 0px calc(21vw / (1280 / 100)) -1px rgba($color:
+                #000000, $alpha: 0.5);
+        }
+        a {
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+        img {
+          width: 348px;
+          @include pc {
+            width: calc(348vw / (1280 / 100));
+          }
+        }
+      }
+    }
+  }
+  &__tabGuide {
+    margin-top: calc(8vw / (768 / 100));
+    &__list {
+      display: flex;
+      flex-direction: column;
+      margin-top: calc(16vw / (768 / 100));
+      gap: calc(16vw / (768 / 100));
+      li {
+        box-shadow: 0 0 calc(5vw / (768 / 100)) 0 #777;
+      }
+    }
+  }
+}

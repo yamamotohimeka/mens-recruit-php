@@ -1,0 +1,167 @@
+.footer {
+  &__link1 {
+    margin-top: 80px;
+    background: $primaryMain;
+    @include pc {
+      margin-top: calc(80vw / (1280 / 100));
+    }
+    @include tab {
+      background: none;
+    }
+    .container {
+      position: relative;
+      padding: 24px 0 38px;
+      @include pc {
+        padding: calc(24vw / (1280 / 100)) 0 calc(38vw / (1280 / 100));
+      }
+    }
+    &__inner {
+      width: 80%;
+      text-align: center;
+    }
+    h3 {
+      color: #fff;
+      font-size: 80px;
+      font-weight: 600;
+      text-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.4);
+      @include pc {
+        font-size: calc(80vw / (1280 / 100));
+        text-shadow: 0 calc(2vw / (1280 / 100)) calc(4vw / (1280 / 100)) rgba($color: #000000, $alpha: 0.4);
+      }
+    }
+    p {
+      margin-top: 8px;
+      color: #fff;
+      font-size: 22px;
+      text-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.4);
+      @include pc {
+        margin-top: calc(8vw / (1280 / 100));
+        font-size: calc(22vw / (1280 / 100));
+        text-shadow: 0 calc(2vw / (1280 / 100)) calc(4vw / (1280 / 100)) rgba($color: #000000, $alpha: 0.4);
+      }
+    }
+    &-button {
+      margin-top: 8px;
+      @include pc {
+        margin-top: calc(8vw / (1280 / 100));
+      }
+      &:hover {
+        opacity: 0.6;
+        transition: 0.12s;
+      }
+      img {
+        width: 428px;
+        @include pc {
+          width: calc(428vw / (1280 / 100));
+        }
+      }
+    }
+    &-img {
+      position: absolute;
+      right: 120px;
+      bottom: 0;
+      width: 297px;
+      @include pc {
+        right: calc(120vw / (1280 / 100));
+        width: calc(297vw / (1280 / 100));
+      }
+    }
+  }
+  &__link2 {
+    margin-top: 60px;
+    padding: 60px 0 80px;
+    background: url(../images/footer-link1-bg.png) no-repeat;
+    background-size: cover;
+    background-position-y: -220px;
+    text-align: center;
+    @include pc {
+      margin-top: calc(60vw / (1280 / 100));
+      padding: calc(60vw / (1280 / 100)) 0 calc(80vw / (1280 / 100));
+      background-position-y: calc(-220vw / (1280 / 100));
+    }
+    @include tab {
+      margin-top: 0;
+      background: none;
+    }
+    h3 {
+      color: #fff;
+      font-size: 44px;
+      line-height: 1.6;
+      @include pc {
+        font-size: calc(44vw / (1280 / 100));
+      }
+    }
+    &-button {
+      margin-top: 32px;
+      @include pc {
+        margin-top: calc(32vw / (1280 / 100));
+      }
+      a {
+        position: relative;
+        display: flex;
+        width: 360px;
+        margin: 0 auto;
+        padding: 26px;
+        border: 3px solid #fff;
+        transition: all 0.2s ease-in-out;
+        overflow: hidden;
+        @include pc {
+          width: calc(360vw / (1280 / 100));
+          padding: calc(26vw / (1280 / 100));
+          border: calc(3vw / (1280 / 100)) solid #fff;
+        }
+        &:hover {
+          padding: 26px 58px;
+          background: rgba($color: #000000, $alpha: 0.2);
+          @include pc {
+            padding: calc(26vw / (1280 / 100)) calc(58vw / (1280 / 100));
+          }
+          img {
+            right: -60px;
+            @include pc {
+              right: calc(-60vw / (1280 / 100));
+            }
+          }
+        }
+        p {
+          color: #fff;
+          font-size: 34px;
+          @include pc {
+            font-size: calc(34vw / (1280 / 100));
+          }
+        }
+        img {
+          position: absolute;
+          width: 25px;
+          height: 27px;
+          top: 50%;
+          right: 22px;
+          transform: translateY(-50%);
+          transition: all 0.2s ease-in-out;
+          @include pc {
+            width: calc(25vw / (1280 / 100));
+            height: calc(27vw / (1280 / 100));
+            right: calc(22vw / (1280 / 100));
+          }
+        }
+      }
+    }
+  }
+  &-copy {
+    color: #fff;
+    padding: 60px 0 120px;
+    font-size: 14px;
+    text-align: center;
+    background: $primaryMain;
+    @include pc {
+      padding: calc(60vw / (1280 / 100)) 0 calc(120vw / (1280 / 100));
+      font-size: calc(14vw / (1280 / 100));
+    }
+    @include tab {
+      padding: calc(60vw / (768 / 100)) 0;
+    }
+    @include sp {
+      padding: calc(40vw / (440 / 100)) 0;
+    }
+  }
+}
