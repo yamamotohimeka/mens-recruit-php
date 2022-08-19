@@ -15,7 +15,12 @@ $(function () {
   const SideBarScroll = () => {
     const scroll = $(window).scrollTop();
     const minActive = contents.offset().top;
-    const maxActive = contents.offset().top + contents.height() - sideBar.height() - sideBarMargin + parseInt(contents.css("margin-bottom"), 16);
+    const maxActive =
+      contents.offset().top +
+      contents.height() -
+      sideBar.height() -
+      sideBarMargin +
+      parseInt(contents.css("margin-bottom"), 16);
     const topMargin = scroll - minActive + sideBarMargin;
     const bottomMargin = maxActive - minActive + sideBarMargin;
     if (scroll > minActive - sideBarMargin && scroll < maxActive) {

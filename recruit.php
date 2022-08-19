@@ -1,5 +1,6 @@
 <?php 
   $title = '募集要項・給与 - 大阪の風俗男性求人';
+  $path = './';
   include $path .'components/header.php';
 ?>
 <main>
